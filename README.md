@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# AfriEd-Nigerian-Recipe
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+You can clone the app with `git`
+### `git clone https://github.com/Thomasosho/AfriEd-Nigerian-Recipe.git`
+
+Navigate to the project directory with
+### `cd nigerian-recipe`
 
 In the project directory, you can run:
 
@@ -16,8 +21,3 @@ You may also see any lint errors in the console.
 
 ## This is my best delicacy 💁🏾‍♂️
 You can contact me anytime via [+2347057940517] anytime you're in 🇳🇬Nigeria 🕺🏾.
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# AfriEd-Nigerian-Recipe
