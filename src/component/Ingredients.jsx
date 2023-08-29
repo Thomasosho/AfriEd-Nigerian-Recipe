@@ -21,27 +21,32 @@ const Ingredients = () => {
         Show Ingredients
       </button>
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-            <div className="modal-content py-4 text-left px-6">
-              <div className="flex justify-between items-center pb-3">
-                <p className="text-2xl font-semibold">Ingredients</p>
-                <button onClick={closeModal} className="text-red-500">
-                  Close
-                </button>
+        <div className="fixed inset-0 z-50">
+          {/* Transparent dark background */}
+          <div className="fixed inset-0 bg-black opacity-50"></div>
+          
+          <div className="flex items-center justify-center h-screen">
+            <div className="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+              <div className="modal-content py-4 text-left px-6">
+                <div className="flex justify-between items-center pb-3">
+                  <p className="text-2xl font-semibold">Ingredients</p>
+                  <button onClick={closeModal} className="text-red-500">
+                    Close
+                  </button>
+                </div>
+                <p className="text-gray-700">
+                  {meat.map((m, index) => (
+                    <div key={index}>
+                      <h2 className='font-bold'>{m.ingredient}</h2>
+                      <ol className="list-decimal list-inside">
+                        {m.items.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item.name}</li>
+                        ))}
+                      </ol>
+                    </div>
+                  ))}
+                </p>
               </div>
-              <p className="text-gray-700">
-                {meat.map((m, index) => (
-                  <div key={index}>
-                    <h2 className='font-bold'>{m.ingredient}</h2>
-                    <ol className="list-decimal list-inside">
-                      {m.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>{item.name}</li>
-                      ))}
-                    </ol>
-                  </div>
-                ))}
-              </p>
             </div>
           </div>
         </div>
